@@ -50,6 +50,20 @@ def test_invalid_json_returns_400(client):
     r = client.post("/predict", data="not json", content_type="application/json")
     assert r.status_code == 400
 
+def test_invalid_tenure_returns_400(client):
+    payload = load("sample.json")
+    payload["tenure"] = 999999
+    r = client.post("/predict", json=payload)
+    assert r.status_code == 400
+    assert "details" in r.get_json()
+
+
+def test_bad_category_returns_400(client):
+    payload = load("sample.json")
+    payload["Contract"] = "Lifetime"
+    r = client.post("/predict", json=payload)
+    assert r.status_code == 400
+
 
 @pytest.mark.parametrize("tenure,expected", [
     (0, "0-1yr"), (12, "0-1yr"), (13, "1-2yr"),

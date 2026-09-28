@@ -80,19 +80,38 @@ function App() {
 
       <label>
         Tenure (months):
-        <input type="number" name="tenure" value={formData.tenure} onChange={handleChange} />
+        <input
+          type="number"
+          name="tenure"
+          min="0"
+          max="100"
+          value={formData.tenure}
+          onChange={handleChange}
+        />
       </label>
       <br />
 
       <label>
         Monthly Charges:
-        <input type="number" name="MonthlyCharges" value={formData.MonthlyCharges} onChange={handleChange} />
+        <input
+          type="number"
+          name="MonthlyCharges"
+          min="0"
+          value={formData.MonthlyCharges}
+          onChange={handleChange}
+        />
       </label>
       <br />
 
       <label>
         Total Charges:
-        <input type="number" name="TotalCharges" value={formData.TotalCharges} onChange={handleChange} />
+        <input
+          type="number"
+          name="TotalCharges"
+          min="0"
+          value={formData.TotalCharges}
+          onChange={handleChange}
+        />
       </label>
       <br />
 

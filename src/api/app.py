@@ -3,6 +3,7 @@ from flask_cors import CORS
 
 from src.api.config import REQUIRED_FIELDS
 from src.api.model_service import ChurnService
+from src.api.preprocessing import validate_payload
 
 app = Flask(__name__)
 CORS(app)
@@ -15,6 +16,9 @@ def validate(payload):
     missing = [f for f in REQUIRED_FIELDS if f not in payload]
     if missing:
         return jsonify({"error": "Missing fields", "fields": missing}), 400
+    errors = validate_payload(payload)
+    if errors:
+        return jsonify({"error": "Invalid input", "details": errors}), 400
     return None
 
 
