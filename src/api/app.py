@@ -1,9 +1,11 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 from src.api.config import REQUIRED_FIELDS
 from src.api.model_service import ChurnService
 
 app = Flask(__name__)
+CORS(app)
 service = ChurnService()
 
 

@@ -4,3 +4,5 @@ __pycache__/
 .env
 data/raw/*.csv
 .ipynb_checkpoints/
+dashboard-react/node_modules/
+dashboard-react/dist/
