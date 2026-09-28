@@ -1,0 +1,10 @@
+{
+  "tenure": 60, "MonthlyCharges": 45.0, "TotalCharges": 2700.0,
+  "SeniorCitizen": "No", "Partner": "No", "Dependents": "No",
+  "PhoneService": "Yes", "MultipleLines": "No",
+  "OnlineSecurity": "No", "OnlineBackup": "No", "DeviceProtection": "No",
+  "TechSupport": "No", "StreamingTV": "No", "StreamingMovies": "No",
+  "PaperlessBilling": "Yes",
+  "gender": "Male", "InternetService": "No",
+  "Contract": "Two year", "PaymentMethod": "Credit card (automatic)"
+}
