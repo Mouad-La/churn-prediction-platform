@@ -25,6 +25,7 @@ Two findings drove the modeling and business recommendations:
 
 ## Architecture
 
+```
 Telco Customer CSV (Kaggle)
 │
 ▼
@@ -52,7 +53,7 @@ calls the API) reads PostgreSQL directly)
 │
 ▼
 Docker Compose (API + PostgreSQL, gunicorn)
-
+```
 
 ## Key Results
 
