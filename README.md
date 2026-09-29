@@ -44,8 +44,8 @@ SHAP explainability (global) + coefficient-based explanations (per-request)
         ▼
 Flask REST API (/health, /predict, /explain) — validated input, CORS-enabled
         │
-   ┌────┴────┐
-   ▼         ▼
+   ┌────┴───────────────┐
+   ▼                    ▼
 React dashboard   Power BI report
 (operational,     (executive,
  per-customer,     aggregate view,
