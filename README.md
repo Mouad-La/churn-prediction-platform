@@ -27,31 +27,31 @@ Two findings drove the modeling and business recommendations:
 
 ```
 Telco Customer CSV (Kaggle)
-│
-▼
+        │
+        ▼
 Python cleaning & feature engineering (Pandas)
-│
-▼
+        │
+        ▼
 PostgreSQL (normalized customers / subscriptions schema, FK + indexes)
-│
-▼
+        │
+        ▼
 Model training & comparison
 (Logistic Regression, Random Forest, XGBoost — scikit-learn, XGBoost)
-│
-▼
+        │
+        ▼
 SHAP explainability (global) + coefficient-based explanations (per-request)
-│
-▼
+        │
+        ▼
 Flask REST API (/health, /predict, /explain) — validated input, CORS-enabled
-│
-┌────┴────┐
-▼ ▼
-React dashboard Power BI report
-(operational, (executive,
-per-customer, aggregate view,
-calls the API) reads PostgreSQL directly)
-│
-▼
+        │
+   ┌────┴────┐
+   ▼         ▼
+React dashboard   Power BI report
+(operational,     (executive,
+ per-customer,     aggregate view,
+ calls the API)    reads PostgreSQL directly)
+        │
+        ▼
 Docker Compose (API + PostgreSQL, gunicorn)
 ```
 
