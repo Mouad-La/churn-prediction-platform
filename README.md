@@ -111,27 +111,29 @@ application API for a dataset this size.
 
 ## Project Structure
 
+```
 churn-prediction-platform/
 ├── data/
-│ ├── raw/ # original Kaggle CSV (not committed)
-│ └── processed/ # cleaned + feature-engineered CSVs
-├── notebooks/ # exploratory work (cleaning, EDA, stats, modeling)
+│   ├── raw/                # original Kaggle CSV (not committed)
+│   └── processed/          # cleaned + feature-engineered CSVs
+├── notebooks/               # exploratory work (cleaning, EDA, stats, modeling)
 ├── src/
-│ └── api/
-│ ├── app.py # Flask routes
-│ ├── config.py # constants, paths, threshold
-│ ├── preprocessing.py # feature engineering + validation, shared by API + notebooks
-│ └── model_service.py # model loading, predict, explain
-├── models/ # saved model, scaler, feature columns (.joblib)
-├── tests/ # pytest suite for the API and preprocessing
-├── dashboard-react/ # React + Vite operational dashboard
+│   └── api/
+│       ├── app.py           # Flask routes
+│       ├── config.py        # constants, paths, threshold
+│       ├── preprocessing.py # feature engineering + validation, shared by API + notebooks
+│       └── model_service.py # model loading, predict, explain
+├── models/                  # saved model, scaler, feature columns (.joblib)
+├── tests/                   # pytest suite for the API and preprocessing
+├── dashboard-react/          # React + Vite operational dashboard
 ├── powerbi/
-│ └── churn_dashboard.pbix # executive report
+│   └── churn_dashboard.pbix  # executive report
 ├── Dockerfile
 ├── docker-compose.yml
-├── requirements.txt # full dev environment
-├── requirements-api.txt # minimal, pinned, used by the Docker image
+├── requirements.txt          # full dev environment
+├── requirements-api.txt      # minimal, pinned, used by the Docker image
 └── README.md
+```
 
 ## How to Run
 
